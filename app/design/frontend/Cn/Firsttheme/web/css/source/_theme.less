@@ -1,0 +1,75 @@
+//FONTS//
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css');
+
+//FONTFACE//
+@font-face {
+    font-family: 'AbrilFatfaceRegular';
+    src: url('../fonts/AbrilFatfaceRegular.eot');
+    src: url('../fonts/AbrilFatfaceRegular.eot') format('embedded-opentype'),
+         url('../fonts/AbrilFatfaceRegular.woff2') format('woff2'),
+         url('../fonts/AbrilFatfaceRegular.woff') format('woff'),
+         url('../fonts/AbrilFatfaceRegular.ttf') format('truetype'),
+         url('../fonts/AbrilFatfaceRegular.svg#AbrilFatfaceRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'CinzelRegular';
+    src: url('../fonts/CinzelRegular.eot');
+    src: url('../fonts/CinzelRegular.eot') format('embedded-opentype'),
+         url('../fonts/CinzelRegular.woff2') format('woff2'),
+         url('../fonts/CinzelRegular.woff') format('woff'),
+         url('../../fonts/CinzelRegular.ttf') format('truetype'),
+         url('../fonts/CinzelRegular.svg#CinzelRegular') format('svg');
+}
+
+//BORDER RADIUS ALL SIDE//
+.search-border-radiuses (@topright, @bottomright, @bottomleft, @topleft) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+    
+    -ms-border-radius-topright:         @topright;
+	-ms-border-radius-bottomright:      @bottomright;
+	-ms-border-radius-bottomleft:       @bottomleft;
+	-ms-border-radius-topleft:          @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+}
+
+//BORDER RADIUS COMMON//
+.round-borders (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+}
+
+//VARIABLE//
+@font-family-Open: 'Open Sans', sans-serif;
+@font-family-Abirlfat: 'AbrilFatfaceRegular';
+@font-family-Cinzel: 'CinzelRegular';
+@white:#fff;
+@black:#000;
+@skyblue:#00aedb;
+@top-black:#2C2C2C;
+@ash-color:#F1F1F1;
+@yellow:#FED100;
+@colorgrey:#656565;
+//MEDIA QUERY//
+.responsive(@maxWidth; @rules) {
+    @media screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
