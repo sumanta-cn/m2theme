@@ -20,11 +20,6 @@
     <referenceBlock name="store_switcher" remove="true"/>
     <referenceBlock name="advanced-search-link" remove="true"/>
     <referenceBlock name="header" remove="true"/>
-<referenceBlock name="top.links">
-    <arguments>
-        <argument name="template" xsi:type="string">Magento_Customer::/account/link/authorization.phtml</argument>
-    </arguments>
-</referenceBlock>       
     <referenceBlock name="logo">
            <arguments>
               <argument name="logo_file" xsi:type="string">images/my_logo.png</argument>
@@ -32,6 +27,7 @@
               <argument name="logo_img_height" xsi:type="number">56</argument>
            </arguments>
         </referenceBlock> 
+       <referenceContainer name="footer">
         <referenceBlock name="footer_links">     
           <block class="Magento\Framework\View\Element\Html\Link\Current" name="Selling-on-Caricraft" after="returns and refunds policy-link">
                 <arguments>
@@ -87,8 +83,14 @@
                     <argument name="path" xsi:type="string">sales/guest/form</argument>
                 </arguments>
             </block>
+            </referenceBlock>
         <block class="Magento\Framework\View\Element\Template" name="payment.link" template="Magento_Theme::paymentlinks.phtml" />
         <block class="Magento\Framework\View\Element\Template" name="social.link" template="Magento_Theme::social-links.phtml" /> 
-      </referenceBlock>
+      </referenceContainer>
+        <referenceBlock name="header.links">
+    <arguments>
+        <argument name="template" xsi:type="string">Magento_Theme::top_links.phtml</argument>
+    </arguments>
+</referenceBlock>
 </body>
 </page>
