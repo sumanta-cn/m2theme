@@ -1,4 +1,9 @@
 <?php
+/**
+* Copyright 2016 aheadWorks. All rights reserved.
+* See LICENSE.txt for license details.
+*/
+
 // @codingStandardsIgnoreFile
 
 /** @var $block \Aheadworks\Rbslider\Block\Banner */
@@ -47,13 +52,22 @@ if (!$block->isAjax()): ?>
                         <?php if ($slide->getUrl()): ?>
                             </a>
                         <?php endif; ?>
-                    </div></li>
+                    </div>
+                    <div class="slide_caption">
+<h2>For anything under the</h2>
+<h1>
+<span></span>
+Caribbean Sun
+<span></span>
+</h1>
+</div>
+</li>
                     <?php $dotNavItems .= '<li data-uk-slideshow-item="' . $key . '"><a href="#"></a></li>' ?>
                 <?php endforeach; ?>
             </ul>
             <?php if ($bannerBlock->getBanner()->getDisplayArrows()) : ?>
-                <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
-                <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+              <!--  <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+                <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a> -->
             <?php endif; ?>
             <?php if ($bannerBlock->getBanner()->getDisplayBullets()) : ?>
                 <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">

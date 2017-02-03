@@ -5565,4 +5565,29 @@ a{
         }
     }
 }
-
+//My custom Style change
+.home-blog h3 {
+    color: #2c2c2c;
+    font-family: "AbrilFatfaceRegular";
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0;
+    padding-bottom: 42px;
+    text-align: center;
+}
+.home-blog h3 {
+    color: #2c2c2c;
+    font-family: "AbrilFatfaceRegular";
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0;
+    padding-bottom: 42px;
+    text-align: center;
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}

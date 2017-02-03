@@ -1,5 +1,5 @@
 <div data-block="minicart" class="minicart-wrapper">
-    <a class="action showcart" href="http://52.55.237.50/caricraft/checkout/cart/"
+    <a class="action showcart" href="http://localhost/magento2inst/checkout/cart/"
        data-bind="scope: 'minicart_content'">
         <span class="text">My Cart</span>
         <span class="counter qty empty"
@@ -41,14 +41,10 @@
     }
     </script>
 </div>
-
-
-<!---Best Deal---->
 <div class="top-offer">
-<div class="best-deal"><span class="tag"><img src="http://52.55.237.50/caricraft/pub/media/wysiwyg/Home/deal-tag.png" alt="Best Deal Zone" /></span> <span>Best Deal Zone</span> <a href="http://52.55.237.50/caricraft/deals.html/">View all deals</a></div>
+<div class="best-deal"><span class="tag">'<img src='<?php echo $this->getViewFileUrl('images/deal-tag.png'); ?>' alt="Best Deal Zone" /></span> <span>Deal Zone</span> <a href="http://52.55.237.50/caricraft/deals.html/">View all deals</a></div>
 <div class="off">
 <div class="offtext">
-<p>Save 20%</p>
-<span>On selected series</span></div>
-</div>
+<p>Save 50%</p>
+<span>On selected tops</span></div>
 </div>

@@ -11,7 +11,7 @@
 		<referenceBlock name="my-account-link" remove="true"/> 
     <referenceBlock name="catalog.compare.link" remove="true"/>
     <referenceBlock name="report.bugs" remove="true"/>
-    <referenceBlock name="copyright" remove="true"/>
+    <referenceBlock name="copyright" remove="false"/>
     <referenceBlock name="skip_to_content" remove="true"/>  
     <referenceBlock name="store.settings.language" remove="true"/>
     <referenceBlock name="store.settings.currency" remove="true"/>
@@ -29,7 +29,7 @@
         </referenceBlock> 
        <referenceContainer name="footer">
         <referenceBlock name="footer_links">     
-          <block class="Magento\Framework\View\Element\Html\Link\Current" name="Selling-on-Caricraft" after="returns and refunds policy-link">
+          <block class="Magento\Framework\View\Element\Html\Link\Current" name="Selling-on-Caricraft" after="blog-link">
                 <arguments>
                     <argument name="label" xsi:type="string">Selling on Caricraft</argument>
                     <argument name="path" xsi:type="string">Selling on Caricraft</argument>
@@ -41,25 +41,25 @@
                     <argument name="path" xsi:type="string">privacy-policy-cookie-restriction-mode</argument>
                 </arguments>
             </block>
-             <block class="Magento\Framework\View\Element\Html\Link\Current"  name="search-term-popular-link" after="privacy-policy-link">
+             <block class="Magento\Framework\View\Element\Html\Link\Current"  name="search-term-popular-link" after="sales-guest-form-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Search Terms</argument>
                     <argument name="path" xsi:type="string">search/term/popular</argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Link\Current"  name="contact-us-link" after="search-term-popular-link">
+            <block class="Magento\Framework\View\Element\Html\Link\Current"  name="contact-us-link" after="catalog-search-advanced-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
                     <argument name="path" xsi:type="string">contact</argument>
                 </arguments>
             </block>
-             <block class="Magento\Sales\Block\Guest\Link" name="sales-guest-form-link" after="blog-link">
+             <block class="Magento\Sales\Block\Guest\Link" name="sales-guest-form-link" after="privacy-policy-link">
                 <arguments>
                     <argument name="label" xsi:type="string">Orders and Returns</argument>
                     <argument name="path" xsi:type="string">sales/guest/form</argument>
                 </arguments>
             </block>
-             <block class="Magento\Framework\View\Element\Html\Link\Current" name="catalog-search-advanced-link" after="sales-guest-form-link">
+             <block class="Magento\Framework\View\Element\Html\Link\Current" name="catalog-search-advanced-link" after="search-term-popular-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Advanced Search</argument>
                     <argument name="path" xsi:type="string">catalogsearch/advanced</argument>
@@ -68,7 +68,7 @@
                     </argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Link\Current" name="returns and refunds policy-link" after="catalog-search-advanced-link">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="returns and refunds policy-link" after="contact-us-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Returns and Refunds policy</argument>
                     <argument name="path" xsi:type="string">catalogsearch/advanced</argument>
@@ -77,7 +77,7 @@
                     </argument>
                 </arguments>
             </block>
-             <block class="Magento\Sales\Block\Guest\Link" name="blog-link" after="contact-us-link">
+             <block class="Magento\Sales\Block\Guest\Link" name="blog-link" after="returns and refunds policy-link">
                 <arguments>
                     <argument name="label" xsi:type="string">Blog</argument>
                     <argument name="path" xsi:type="string">sales/guest/form</argument>
@@ -92,5 +92,6 @@
         <argument name="template" xsi:type="string">Magento_Theme::top_links.phtml</argument>
     </arguments>
 </referenceBlock>
+<move element = "form.subscribe" destination = "footer" after="footer_links" /> 
 </body>
 </page>

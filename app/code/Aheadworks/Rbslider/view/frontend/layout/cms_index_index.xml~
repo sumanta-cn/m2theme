@@ -1,4 +1,11 @@
 <?xml version="1.0"?>
+<!--
+/**
+* Copyright 2016 aheadWorks. All rights reserved.
+* See LICENSE.txt for license details.
+*/
+-->
+
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.top">
@@ -6,7 +13,7 @@
             <block class="Aheadworks\Rbslider\Block\Banner" name="banner_home_menu_bottom" as="banner_home_menu_bottom" after="navigation.sections" />
         </referenceContainer>
         <referenceContainer name="content">
-            <block class="Aheadworks\Rbslider\Block\Banner" name="banner_home_content_top" as="banner_home_content_top" before="-" template="Aheadworks_Rbslider::test1.phtml"/>
+            <block class="Aheadworks\Rbslider\Block\Banner" name="banner_home_content_top" as="banner_home_content_top" before="-"  template="Aheadworks_Rbslider::test1.phtml"/>
         </referenceContainer>
         <referenceContainer name="sidebar.additional">
             <block class="Aheadworks\Rbslider\Block\Banner" name="banner_home_sidebar_top" as="banner_home_sidebar_top" before="-" />
